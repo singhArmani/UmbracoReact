@@ -112,3 +112,31 @@
  2018-03-27 22:56:36,358 [P5932/D2/T41] INFO  umbraco.content - Save Xml to file...
  2018-03-27 22:56:36,374 [P5932/D2/T41] INFO  umbraco.content - Saved Xml to file.
  2018-03-27 23:03:42,512 [P5932/D2/T41] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2018-03-27 23:12:29,551 [P5932/D2/T50] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-27 23:12:53,034 [P5932/D2/T21] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2018-03-27 23:12:53,034 [P5932/D2/T21] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2018-03-27 23:12:55,389 [P5932/D2/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2018-03-27 23:12:55,389 [P5932/D2/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2018-03-27 23:12:55,391 [P5932/D2/T21] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-27 23:13:37,405 [P5932/D2/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2018-03-27 23:13:37,405 [P5932/D2/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2018-03-27 23:13:37,433 [P5932/D2/T48] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2018-03-27 23:13:37,433 [P5932/D2/T48] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2018-03-27 23:20:13,226 [P5932/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Articles' with Id '0' has been published.
+ 2018-03-27 23:20:17,293 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:20:17,300 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:21:01,946 [P5932/D2/T13] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Articles' with Id '1074' has been published.
+ 2018-03-27 23:21:06,009 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:21:06,016 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:23:52,034 [P5932/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Article1' with Id '0' has been published.
+ 2018-03-27 23:23:56,113 [P5932/D2/T21] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:23:56,126 [P5932/D2/T21] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:24:40,366 [P5932/D2/T13] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Dilemma of using setState in React LifeCycle Hooks' with Id '1075' has been published.
+ 2018-03-27 23:24:44,477 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:24:44,485 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:29:20,539 [P5932/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Lets use composition confidently' with Id '0' has been published.
+ 2018-03-27 23:29:24,617 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:29:24,628 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:29:31,641 [P5932/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Let's use composition confidently' with Id '1076' has been published.
+ 2018-03-27 23:29:35,685 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
+ 2018-03-27 23:29:35,692 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
