@@ -140,3 +140,6 @@
  2018-03-27 23:29:31,641 [P5932/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Let's use composition confidently' with Id '1076' has been published.
  2018-03-27 23:29:35,685 [P5932/D2/T25] INFO  umbraco.content - Save Xml to file...
  2018-03-27 23:29:35,692 [P5932/D2/T25] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-27 23:37:40,528 [P5932/D2/T48] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2018-03-27 23:37:40,528 [P5932/D2/T48] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2018-03-27 23:37:40,530 [P5932/D2/T27] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
