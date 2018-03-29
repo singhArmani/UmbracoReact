@@ -1,4 +1,4 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
 	Layout = "Master.cshtml";
@@ -9,10 +9,10 @@
 			
 			<article>
 				<header>
-				@Umbraco.Field("bodyText")
+				@Model.BodySecondaryTitle
 				</header>
 				<section>
-					<h2>@Umbraco.Field("articleTitle1")</h2>
+					<h2>@Model.</h2>
 					<p>@Umbraco.Field("articleBodyText1").</p>
 				</section>
 				<section>
