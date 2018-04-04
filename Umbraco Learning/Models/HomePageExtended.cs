@@ -11,6 +11,6 @@ namespace Umbraco_Learning.Models
         public HomePageExtended(IPublishedContent content) : base(content)
         {
         }
-        public string Number { get { return "trest"; } }
+        public string Number { get { return "test"; } }
     }
 }

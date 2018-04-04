@@ -82,12 +82,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Body Secondary Title
+		/// Aside Text
 		///</summary>
-		[ImplementPropertyType("bodySecondaryTitle")]
-		public string BodySecondaryTitle
+		[ImplementPropertyType("asideText")]
+		public IHtmlString AsideText
 		{
-			get { return this.GetPropertyValue<string>("bodySecondaryTitle"); }
+			get { return this.GetPropertyValue<IHtmlString>("asideText"); }
+		}
+
+		///<summary>
+		/// Aside Title
+		///</summary>
+		[ImplementPropertyType("asideTitle")]
+		public string AsideTitle
+		{
+			get { return this.GetPropertyValue<string>("asideTitle"); }
 		}
 
 		///<summary>
