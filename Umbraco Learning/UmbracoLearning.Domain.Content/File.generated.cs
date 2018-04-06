@@ -18,18 +18,18 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-namespace Umbraco.Web.PublishedContentModels
+namespace UmbracoLearning.Domain.Content
 {
-	/// <summary>Folder</summary>
-	[PublishedContentModel("Folder")]
-	public partial class Folder : PublishedContentModel
+	/// <summary>File</summary>
+	[PublishedContentModel("File")]
+	public partial class File : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Folder";
+		public new const string ModelTypeAlias = "File";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
 #pragma warning restore 0109
 
-		public Folder(IPublishedContent content)
+		public File(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,18 +40,36 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Folder, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<File, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// Contents:
+		/// Size
 		///</summary>
-		[ImplementPropertyType("contents")]
-		public object Contents
+		[ImplementPropertyType("umbracoBytes")]
+		public string UmbracoBytes
 		{
-			get { return this.GetPropertyValue("contents"); }
+			get { return this.GetPropertyValue<string>("umbracoBytes"); }
+		}
+
+		///<summary>
+		/// Type
+		///</summary>
+		[ImplementPropertyType("umbracoExtension")]
+		public string UmbracoExtension
+		{
+			get { return this.GetPropertyValue<string>("umbracoExtension"); }
+		}
+
+		///<summary>
+		/// Upload file
+		///</summary>
+		[ImplementPropertyType("umbracoFile")]
+		public string UmbracoFile
+		{
+			get { return this.GetPropertyValue<string>("umbracoFile"); }
 		}
 	}
 }

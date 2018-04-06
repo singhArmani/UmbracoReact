@@ -18,18 +18,18 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-namespace Umbraco.Web.PublishedContentModels
+namespace UmbracoLearning.Domain.Content
 {
-	/// <summary>Articles Item</summary>
-	[PublishedContentModel("articlesItem")]
-	public partial class ArticlesItem : PublishedContentModel
+	/// <summary>File</summary>
+	[PublishedContentModel("File")]
+	public partial class File : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "articlesItem";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		public new const string ModelTypeAlias = "File";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
 #pragma warning restore 0109
 
-		public ArticlesItem(IPublishedContent content)
+		public File(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,27 +40,36 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticlesItem, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<File, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// Article Contents
+		/// Size
 		///</summary>
-		[ImplementPropertyType("articleContents")]
-		public IHtmlString ArticleContents
+		[ImplementPropertyType("umbracoBytes")]
+		public string UmbracoBytes
 		{
-			get { return this.GetPropertyValue<IHtmlString>("articleContents"); }
+			get { return this.GetPropertyValue<string>("umbracoBytes"); }
 		}
 
 		///<summary>
-		/// Article Title
+		/// Type
 		///</summary>
-		[ImplementPropertyType("articleTitle")]
-		public string ArticleTitle
+		[ImplementPropertyType("umbracoExtension")]
+		public string UmbracoExtension
 		{
-			get { return this.GetPropertyValue<string>("articleTitle"); }
+			get { return this.GetPropertyValue<string>("umbracoExtension"); }
+		}
+
+		///<summary>
+		/// Upload file
+		///</summary>
+		[ImplementPropertyType("umbracoFile")]
+		public string UmbracoFile
+		{
+			get { return this.GetPropertyValue<string>("umbracoFile"); }
 		}
 	}
 }

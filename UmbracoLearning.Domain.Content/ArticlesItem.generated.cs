@@ -18,18 +18,18 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-namespace Umbraco.Web.PublishedContentModels
+namespace UmbracoLearning.Domain.Content
 {
-	/// <summary>Simple Content Page</summary>
-	[PublishedContentModel("simpleContentPage")]
-	public partial class SimpleContentPage : PublishedContentModel
+	/// <summary>Articles Item</summary>
+	[PublishedContentModel("articlesItem")]
+	public partial class ArticlesItem : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "simpleContentPage";
+		public new const string ModelTypeAlias = "articlesItem";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public SimpleContentPage(IPublishedContent content)
+		public ArticlesItem(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,27 +40,27 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SimpleContentPage, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticlesItem, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// Body Text: Body of the page
+		/// Article Contents
 		///</summary>
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText
+		[ImplementPropertyType("articleContents")]
+		public IHtmlString ArticleContents
 		{
-			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
+			get { return this.GetPropertyValue<IHtmlString>("articleContents"); }
 		}
 
 		///<summary>
-		/// Page Title: title of the page
+		/// Article Title
 		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
+		[ImplementPropertyType("articleTitle")]
+		public string ArticleTitle
 		{
-			get { return this.GetPropertyValue<string>("pageTitle"); }
+			get { return this.GetPropertyValue<string>("articleTitle"); }
 		}
 	}
 }

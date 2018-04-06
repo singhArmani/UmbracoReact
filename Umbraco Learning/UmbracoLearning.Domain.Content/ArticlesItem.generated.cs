@@ -18,18 +18,18 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-namespace Umbraco.Web.PublishedContentModels
+namespace UmbracoLearning.Domain.Content
 {
-	/// <summary>Articles Main</summary>
-	[PublishedContentModel("articlesMain")]
-	public partial class ArticlesMain : PublishedContentModel
+	/// <summary>Articles Item</summary>
+	[PublishedContentModel("articlesItem")]
+	public partial class ArticlesItem : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "articlesMain";
+		public new const string ModelTypeAlias = "articlesItem";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public ArticlesMain(IPublishedContent content)
+		public ArticlesItem(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,27 +40,27 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticlesMain, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticlesItem, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// Articles Body Text
+		/// Article Contents
 		///</summary>
-		[ImplementPropertyType("articlesBodyText")]
-		public IHtmlString ArticlesBodyText
+		[ImplementPropertyType("articleContents")]
+		public IHtmlString ArticleContents
 		{
-			get { return this.GetPropertyValue<IHtmlString>("articlesBodyText"); }
+			get { return this.GetPropertyValue<IHtmlString>("articleContents"); }
 		}
 
 		///<summary>
-		/// Articles Title
+		/// Article Title
 		///</summary>
-		[ImplementPropertyType("articlesTitle")]
-		public string ArticlesTitle
+		[ImplementPropertyType("articleTitle")]
+		public string ArticleTitle
 		{
-			get { return this.GetPropertyValue<string>("articlesTitle"); }
+			get { return this.GetPropertyValue<string>("articleTitle"); }
 		}
 	}
 }

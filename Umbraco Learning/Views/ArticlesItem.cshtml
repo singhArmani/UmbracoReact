@@ -1,13 +1,14 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ArticlesItem>
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+﻿@using UmbracoLearning.Domain.Content;
+@inherits UmbracoViewPage<ArticlesItem>
+
 @{
-	Layout = "Master.cshtml";
+Layout = "Master.cshtml";
 }
-<div id="main-container">
-	<div id="main" class="wrapper clearfix">
-		<section>
-			<h2>@Umbraco.Field("articleTitle")</h2>
-			<p>@Umbraco.Field("articleContents")</p>
-		</section>	
-	</div> <!-- #main -->
-</div> <!-- #main-container -->
+    <div id="main-container">
+        <div id="main" class="wrapper clearfix">
+            <section>
+                <h2>@Model.ArticleTitle</h2>
+                <p>@Model.ArticleContents</p>
+            </section>
+        </div> <!-- #main -->
+    </div> <!-- #main-container -->
