@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoLearning", "Umbraco Learning\UmbracoLearning.csproj", "{F881FD6F-F18C-492A-A204-AFCBF0B5CA91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Umbraco Learning\Web.csproj", "{F881FD6F-F18C-492A-A204-AFCBF0B5CA91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoRepository", "UmbracoRepository\UmbracoRepository.csproj", "{B351C97F-DC37-44CE-883A-CD63D8D9CCD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Models\Entities.csproj", "{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoContracts", "UmbracoContracts\UmbracoContracts.csproj", "{F0411FEB-A17B-4672-BAF7-C7AD3BC235FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{49CFE085-C40A-41F1-A525-9AC607DDA4F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Models\Entities.csproj", "{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{B9042673-9064-4CAC-88DB-E10A6E23E057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{ECAB640C-A097-40EF-8629-E8EF90F0D1C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +23,22 @@ Global
 		{F881FD6F-F18C-492A-A204-AFCBF0B5CA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F881FD6F-F18C-492A-A204-AFCBF0B5CA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F881FD6F-F18C-492A-A204-AFCBF0B5CA91}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B351C97F-DC37-44CE-883A-CD63D8D9CCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B351C97F-DC37-44CE-883A-CD63D8D9CCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B351C97F-DC37-44CE-883A-CD63D8D9CCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B351C97F-DC37-44CE-883A-CD63D8D9CCD4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0411FEB-A17B-4672-BAF7-C7AD3BC235FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0411FEB-A17B-4672-BAF7-C7AD3BC235FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0411FEB-A17B-4672-BAF7-C7AD3BC235FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0411FEB-A17B-4672-BAF7-C7AD3BC235FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326B12E8-21A8-4C9A-A82E-9B67C84FCC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49CFE085-C40A-41F1-A525-9AC607DDA4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49CFE085-C40A-41F1-A525-9AC607DDA4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49CFE085-C40A-41F1-A525-9AC607DDA4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49CFE085-C40A-41F1-A525-9AC607DDA4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9042673-9064-4CAC-88DB-E10A6E23E057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9042673-9064-4CAC-88DB-E10A6E23E057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9042673-9064-4CAC-88DB-E10A6E23E057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9042673-9064-4CAC-88DB-E10A6E23E057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECAB640C-A097-40EF-8629-E8EF90F0D1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECAB640C-A097-40EF-8629-E8EF90F0D1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAB640C-A097-40EF-8629-E8EF90F0D1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECAB640C-A097-40EF-8629-E8EF90F0D1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
