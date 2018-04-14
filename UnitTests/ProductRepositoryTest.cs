@@ -23,10 +23,11 @@ namespace UnitTests
         [TestMethod]
         public void IsRepositoryInitalizeWithValidNumberOfData()
         {
-            var result = Repo.FindAll();
-            Assert.IsNotNull(result);
+           
+            var results = Repo.FindAll();
+            Assert.IsNotNull(results);
 
-            var numOfRecords = result.ToList().Count;
+            var numOfRecords = results.ToList().Count;
             Assert.AreEqual(4, numOfRecords);
         }
 
