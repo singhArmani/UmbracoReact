@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Contracts;
 using Entities;
 using Entities.Models;
 using Repository;
@@ -15,7 +16,14 @@ namespace ProductApp.Web.Controllers
     public class ProductsController : Controller
     {
         // private RepositoryContext db = new RepositoryContext(); 
-        private ProductRepository db = new ProductRepository();
+        // private ProductRepository db = new ProductRepository();
+
+        // uslng unity container 
+        IProductRepository db;
+        public ProductsController(IProductRepository db)
+        {
+            this.db = db;
+        }
 
         // GET: Products
         public ActionResult Index()
