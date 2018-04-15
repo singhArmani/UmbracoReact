@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using Contracts;
 using Entities;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Repository
 {
@@ -21,6 +19,7 @@ namespace Repository
         public void Edit(T entity)
         {
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
         }
 
         public IEnumerable<T> FindAll()
