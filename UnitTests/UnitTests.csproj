@@ -63,16 +63,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Contracts\Contracts.csproj">
-      <Project>{49cfe085-c40a-41f1-a525-9ac607dda4f2}</Project>
-      <Name>Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\Entities.csproj">
-      <Project>{326b12e8-21a8-4c9a-a82e-9b67c84fcc34}</Project>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{5286d4fd-0291-49f6-8628-f8e38cf72bbf}</Project>
       <Name>Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{b9042673-9064-4cac-88db-e10a6e23e057}</Project>
+      <Project>{d36cd510-0e96-47c9-953c-fe848f0355ee}</Project>
       <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>

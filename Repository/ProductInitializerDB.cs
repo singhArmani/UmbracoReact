@@ -7,7 +7,7 @@ using Entities.Models;
 
 namespace Repository
 {
-    public class ProductIntializerDB: DropCreateDatabaseIfModelChanges<RepositoryContext>
+    public class ProductIntializerDB : DropCreateDatabaseIfModelChanges<RepositoryContext>
     {
         protected override void Seed(RepositoryContext context)
         {
