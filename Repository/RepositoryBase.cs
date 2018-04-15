@@ -10,27 +10,22 @@ namespace Repository
 {
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        protected RepositoryContext RepositoryContext { get; set; }
-
-        public RepositoryBase(RepositoryContext repositoryContext)
-        {
-            this.RepositoryContext = repositoryContext;
-        }
+        protected RepositoryContext context = new RepositoryContext();
 
         public void Add(T entity)
         {
-            this.RepositoryContext.Set<T>().Add(entity);
-            this.RepositoryContext.SaveChanges();
+            context.Set<T>().Add(entity);
+            context.SaveChanges();
         }
 
         public void Edit(T entity)
         {
-            this.RepositoryContext.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
         }
 
         public IEnumerable<T> FindAll()
         {
-            return this.RepositoryContext.Set<T>();
+            return context.Set<T>();
         }
     }
 }

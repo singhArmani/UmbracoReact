@@ -17,7 +17,7 @@ namespace UnitTests
             ProductIntializerDB db = new ProductIntializerDB();
             System.Data.Entity.Database.SetInitializer(db);
 
-            Repo = new ProductRepository(new RepositoryContext());
+            Repo = new ProductRepository();
         }
 
         [TestMethod]
