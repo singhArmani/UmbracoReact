@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\uSync.4.0.5\build\uSync.props" Condition="Exists('..\packages\uSync.4.0.5\build\uSync.props')" />
   <Import Project="..\packages\UmbracoCms.7.10.1\build\UmbracoCms.props" Condition="Exists('..\packages\UmbracoCms.7.10.1\build\UmbracoCms.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
@@ -114,6 +115,12 @@
     <Reference Include="JSPool, Version=3.0.1.0, Culture=neutral, PublicKeyToken=2fc7775f73072640, processorArchitecture=MSIL">
       <HintPath>..\packages\JSPool.3.0.1\lib\net451\JSPool.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Jumoo.uSync.BackOffice, Version=4.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.4.0.5\lib\net45\Jumoo.uSync.BackOffice.dll</HintPath>
+    </Reference>
+    <Reference Include="Jumoo.uSync.Core, Version=6.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.Core.6.0.5\lib\net45\Jumoo.uSync.Core.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.10.1\lib\net45\log4net.dll</HintPath>
@@ -328,6 +335,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\uSync\uSyncDashboard.css" />
+    <Content Include="App_Plugins\uSync\uSyncDashboard.html" />
+    <Content Include="App_Plugins\uSync\uSyncDashboardController.js" />
+    <Content Include="App_Plugins\uSync\uSyncDashboardService.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
@@ -379,9 +390,13 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
+    <Content Include="config\uSyncCore.Config" />
+    <Content Include="config\uSyncBackOffice.Config" />
+    <Content Include="App_Plugins\uSync\package.manifest" />
     <None Include="packages.config" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\umbraco-react - Web Deploy.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -496,9 +511,12 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.7.10.1\build\UmbracoCms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.10.1\build\UmbracoCms.props'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.7.10.1\build\UmbracoCms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.10.1\build\UmbracoCms.targets'))" />
+    <Error Condition="!Exists('..\packages\uSync.4.0.5\build\uSync.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\uSync.4.0.5\build\uSync.props'))" />
+    <Error Condition="!Exists('..\packages\uSync.4.0.5\build\uSync.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\uSync.4.0.5\build\uSync.targets'))" />
   </Target>
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <Import Project="..\packages\UmbracoCms.7.10.1\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.7.10.1\build\UmbracoCms.targets')" />
+  <Import Project="..\packages\uSync.4.0.5\build\uSync.targets" Condition="Exists('..\packages\uSync.4.0.5\build\uSync.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
