@@ -5,7 +5,7 @@ using Entities;
 using Entities.Models;
 using System.Text;
 using System.Threading.Tasks;
-using Contracts;
+using RepositoryContracts;
 
 namespace Repository
 {

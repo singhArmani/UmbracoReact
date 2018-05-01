@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Contracts;
+using RepositoryContracts;
 using Entities;
 using Entities.Models;
 using Repository;
@@ -18,7 +18,7 @@ namespace ProductApp.Web.Controllers
         // private RepositoryContext db = new RepositoryContext(); 
         // private ProductRepository db = new ProductRepository();
 
-        // uslng unity container 
+        // using unity container 
         IProductRepository db;
         public ProductsController(IProductRepository db)
         {
