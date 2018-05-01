@@ -7,8 +7,8 @@ Layout = "Master.cshtml";
     <div id="main-container">
         <div id="main" class="wrapper clearfix">
             <section>
+                <h2>@Model.ArticlesTitle</h2>
                 <p>@Model.ArticlesBodyText</p>
-                <h2>@Model.ArticlesTitle</h2>  
                 @Umbraco.RenderMacro("listArticles")
             </section>
         </div> <!-- #main -->
