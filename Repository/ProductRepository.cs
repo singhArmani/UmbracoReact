@@ -9,7 +9,7 @@ using RepositoryContracts;
 
 namespace Repository
 {
-    public class ProductRepository : RepositoryBase<Product>, IProductRepository
+    public class ProductRepository : RepositoryBase<Product> , IProductRepository
     {
 
         public Product FindbyId(int Id)

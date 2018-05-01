@@ -10,36 +10,36 @@ using RepositoryContracts;
 using Entities;
 using Entities.Models;
 using Repository;
+using ServiceContracts;
 
 namespace ProductApp.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        // private RepositoryContext db = new RepositoryContext(); 
-        // private ProductRepository db = new ProductRepository();
 
-        // using unity container 
-        IProductRepository db;
-        public ProductsController(IProductRepository db)
+        private readonly IProductService _productService;
+        public ProductsController(IProductService productService)
         {
-            this.db = db;
+            _productService = productService;
         }
+
+       
 
         // GET: Products
         public ActionResult Index()
         {
-            return View(db.FindAll());
+            return View(_productService.FindAll());
         }
 
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             // Product product = db.Products.Find(id);
-            Product product = db.FindbyId(Convert.ToInt32(id));
+            Product product = _productService.FindbyId(id.Value);
             if (product == null)
             {
                 return HttpNotFound();
@@ -62,7 +62,7 @@ namespace ProductApp.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Add(product);
+                _productService.Add(product);
                 return RedirectToAction("Index");
             }
 
@@ -76,7 +76,7 @@ namespace ProductApp.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.FindbyId(Convert.ToInt32(id));
+            Product product = _productService.FindbyId(id.Value);
             if (product == null)
             {
                 return HttpNotFound();
@@ -93,7 +93,7 @@ namespace ProductApp.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Edit(product);
+                _productService.Edit(product);
                 return RedirectToAction("Index");
             }
             return View(product);
@@ -106,7 +106,7 @@ namespace ProductApp.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.FindbyId(Convert.ToInt32(id));
+            Product product = _productService.FindbyId(id.Value);
             if (product == null)
             {
                 return HttpNotFound();
@@ -121,7 +121,7 @@ namespace ProductApp.Web.Controllers
         {
             //Product product = db.Products.Find(id);
             //db.Products.Remove(product);
-            db.Remove(id);
+            _productService.Remove(id);
             return RedirectToAction("Index");
         }
 

@@ -244,6 +244,14 @@
       <Project>{d36cd510-0e96-47c9-953c-fe848f0355ee}</Project>
       <Name>Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServiceContracts\ServiceContracts.csproj">
+      <Project>{A7C65953-4551-494F-85FD-9EEF1A770639}</Project>
+      <Name>ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{5060748F-0E83-4280-862B-69C405D4DC83}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

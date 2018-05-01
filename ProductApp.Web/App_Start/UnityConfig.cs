@@ -2,6 +2,8 @@ using RepositoryContracts;
 using Repository;
 using System;
 using Unity;
+using ServiceContracts;
+using Services;
 
 namespace ProductApp.Web
 {
@@ -43,6 +45,7 @@ namespace ProductApp.Web
 
             // TODO: Register your type's mappings here.
             container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IProductService, ProductService>();
         }
     }
 }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5060748F-0E83-4280-862B-69C405D4DC83}</ProjectGuid>
+    <ProjectGuid>{A7C65953-4551-494F-85FD-9EEF1A770639}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Services</RootNamespace>
-    <AssemblyName>Services</AssemblyName>
+    <RootNamespace>ServiceContracts</RootNamespace>
+    <AssemblyName>ServiceContracts</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,21 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductService.cs" />
+    <Compile Include="IProductService.cs" />
+    <Compile Include="IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Contracts\RepositoryContracts.csproj">
-      <Project>{2E8B9FD6-D8C7-4133-AF6A-57194DDBB930}</Project>
-      <Name>RepositoryContracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{5286D4FD-0291-49F6-8628-F8E38CF72BBF}</Project>
       <Name>Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceContracts\ServiceContracts.csproj">
-      <Project>{A7C65953-4551-494F-85FD-9EEF1A770639}</Project>
-      <Name>ServiceContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
